@@ -16,41 +16,9 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     max-width: 600px;
     width: 90%;
-    margin: 20px auto;
+    margin: 20px;
     animation: fadeIn 1s ease-in-out;
 }
-
-#new-joke-btn, #share-btn {
-    background: #ff6f61;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 10px;
-    margin-top: 10px;
-    transition: background 0.3s ease, transform 0.3s ease; /* Button hover transition */
-}
-
-#new-joke-btn:hover, #share-btn:hover {
-    background: #e85c50;
-}
-
-#new-joke-btn:hover, #share-btn:hover {
-    transform: scale(1.1); /* Scale up on hover */
-}
-
-@media (max-width: 600px) {
-    #joke-container h1 {
-        font-size: 2em;
-    }
-
-    #new-joke-btn, #share-btn {
-        padding: 10px 20px;
-        font-size: 1em;
-    }
-}
-
 
 @keyframes fadeIn {
     from {
@@ -69,11 +37,72 @@ body {
     color: #ff6f61;
 }
 
-#joke {
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 30px;
-    transition: opacity 0.5s ease; 
+#joke-container h2 {
+    font-size: 2em;
+    margin-top: 30px;
+    color: #ff6f61;
 }
 
+#joke-list, #favorite-jokes {
+    text-align: left;
+    margin-top: 20px;
+}
 
+.joke {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#controls, #sorting, #pagination {
+    margin-top: 20px;
+}
+
+#controls input {
+    padding: 10px;
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+#controls button, #pagination button, #new-joke-btn, #share-btn {
+    background: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+#controls button:hover, #pagination button:hover, #new-joke-btn:hover, #share-btn:hover {
+    background: #e85c50;
+}
+
+#sorting select {
+    padding: 10px;
+    font-size: 1em;
+    margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+    #joke-container h1 {
+        font-size: 2em;
+    }
+
+    .joke {
+        font-size: 1.2em;
+    }
+
+    #controls input, #controls button, #pagination button, #new-joke-btn, #share-btn {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    #sorting select {
+        font-size: 1em;
+    }
+}

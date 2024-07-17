@@ -9,13 +9,28 @@
 <body>
     <div id="joke-container">
         <h1>Dad Joke of the Day</h1>
-        <p id="joke"></p>
         <div id="controls">
             <input type="text" id="category-input" placeholder="Enter a joke category">
             <button id="get-joke-by-category">Get Joke by Category</button>
         </div>
+        <div id="sorting">
+            <label for="sort-select">Sort By:</label>
+            <select id="sort-select">
+                <option value="relevance">Relevance</option>
+                <option value="popularity">Popularity</option>
+                <option value="date">Date</option>
+            </select>
+        </div>
+        <div id="joke-list"></div>
+        <div id="pagination">
+            <button id="prev-page-btn">Previous</button>
+            <span id="page-info">Page 1</span>
+            <button id="next-page-btn">Next</button>
+        </div>
         <button id="new-joke-btn">Get a New Joke</button>
         <button id="share-btn">Share Joke</button>
+        <h2>Favorite Jokes</h2>
+        <div id="favorite-jokes"></div>
     </div>
     <script src="script.js"></script>
 </body>
